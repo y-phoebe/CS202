@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    <!-- fontawesome -->
+    <i class="fab fa-twitter"></i>
+    <i class="fas fa-map-marker-alt"></i> 
+    <i class="fas fa-users"></i>
+    <i class="fas fa-copyright"></i>
+
+    <!-- bootstrap with forms -->
+    <!-- fixed container (container); flexible container (container-fluid) -->
+    <div class="container">
+        <h1>Web Forms Using Bootstrap</h1>
+
+        <!-- SAFE: will hide the form info in the http entity body; the GET method is not safe because it attach info to the url -->
+        <form action="" method="POST">
+            <!-- class="form-group" will bind the label and input type -->
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <!-- input type attributes - name, id, placeholder, required, size, disable, pattern -->
+                <input type="email" class="form-control" name="email" id="email" placeholder="Enter Your Name">
+            </div>
+            <!-- copy & paste -->
+            <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password" id="password">
+                </div>
+                
+                <div class="form-group">
+                    <label for="city" class="form-label">Your State</label>
+                    <select name="city" class="form-select" id="city">
+                        <option value="1">Seattle</option>
+                        <option value="2">Tacoma</option>
+                        <option value="3">Bellingham</option>
+                    </select>
+                </div>
+                
+                <div class="form-check">
+                    <label for="conditions" class="form-check-label">Agree to terms and conditions</label>
+                    <input type="radio" class="form-check-input" name="conditions" id="conditions">
+                </div>
+                
+                <div class="form-check">
+                    <label for="remember" class="form-check-label">Remember Password</label>
+                    <input type="checkbox" class="form-check-input" name="remember" id="remember">
+                </div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+                
+                <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+// Stylesheet for CS202
+// version: 1.1
+// last modified: 9.28.2020
+// author: Phoebe Yost
+// email: phoebeyost01@gmail.com
+// website: lesson3.html
+
+// import scss
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+// import partial
+// create partial with underscore in the name, ex: "_button.scss"
+@import "button";
+
+// scss variables
+// $[name of the variable]
+$primary: #05a081;
+$margin: 22px;
+
+body{
+    background-color: #fff3f0;
+
+    // font-family: Arial;
+    // font-style: italic;
+    // font-weight: bold;
+    // font-size: 18px;
+    // line-height: 200%;
+    // text-transform: uppercase;
+
+    // font shorthand:
+    // font: italic bold 18px/200% Arial;
+
+    // nesting properties
+    font: {
+        family: Arial;
+        style: regular;
+        weight: light;
+        size: 18px;
+    }
+}
+
+h2, h3{
+    color: $primary;
+}
+
+// nesting elements
+// instead of doing nav a{
+nav{
+    text-align: center;
+    a{
+        text-decoration: none;
+        color: $primary;
+        font-weight: bold;
+        display: inline-block;
+        // first = top & bottom, next = left & right
+        padding: 1em 0.5em;
+        font: {
+            weight: bold;
+            size: 18px;
+            margin: $margin/2;
+        }
+    }
+}
