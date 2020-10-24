@@ -1,0 +1,303 @@
+// Stylesheet for CS202 Final Project
+// version: 1.0
+// created: 10.16.2020
+// author: Phoebe Yost
+// email: yostp@wwu.edu
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js");
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+
+// VARIABLES
+
+$main-color: #bee663;
+$dark-gray: #535353;
+$light-gray: #bfbfbf;
+$white-color: #fff;
+$shadow: 0 1px 6px #bfbfbf;
+
+// INDEX
+
+*{
+    font-family: 'Raleway';
+}
+
+.margin{
+    margin: 6em;
+}
+
+nav{
+    display: grid;
+    grid-template-columns: 8fr 1fr 1fr 0.6fr;
+    grid-gap: 1em;
+    margin-top: 1em;
+    a{
+        text-align: right;
+        text-decoration: none;
+        padding: 1em;
+        display: inline-block;
+        color: $light-gray;
+    }
+    .left-text{
+        text-align: left !important;
+    }
+    a:hover{
+        color: $dark-gray;
+        transition: all 0.6s ease;
+        cursor: pointer;
+    }
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 6em;
+    a{
+        padding: 1em;
+        text-decoration: none;
+        text-align: center;
+        img{
+            height: 30vh;
+            padding: 1em;
+            width: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1{
+            font-size: 24px;
+            color: $dark-gray;
+        }
+        p{
+            color: $light-gray;
+        }
+    }
+    .box{
+        border-radius: 5px;
+    }
+    .box:hover{
+        box-shadow: $shadow;
+        align-content: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+}
+
+.bottom{
+    background-color: $dark-gray;
+    color: $white-color;
+    margin-bottom: 2em;
+    // padding-left: 6em;
+    // padding-right: 6em;
+    // padding-top: 2em;
+    // padding-bottom: 2em;
+    padding: 4em 6em 2em 6em;
+    text-align: center;
+    line-height: 28px;
+    h1{
+        font-size: 28px;
+    }
+    p{
+        font-size: 14px;
+    }
+    .icon{
+        font-size: 40px;
+    }
+    .bottom-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 3em;
+    }
+    a{
+        text-decoration: none;
+        color: $light-gray;
+    }
+    a:hover{
+        color: $white-color;
+        transition: all 0.6s ease;
+        cursor: pointer;
+    }
+}
+
+footer{
+    text-align: center;
+    color: $light-gray;
+    margin-bottom: 2em;
+    font-weight: 200;
+    a{
+        text-decoration: none;
+        color: $light-gray;
+    }
+    a:hover{
+        cursor: pointer;
+        color: $dark-gray;
+        transition: all 0.3s ease;
+    }
+}
+
+// ABOUT
+
+.about-grid{
+    color: $dark-gray;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 6em;
+    img{
+        height: 50vh;
+        width: auto;
+    }
+}
+
+// CONTACT
+
+.contact{
+    color: $dark-gray;
+    .header{
+        margin-left: 6em;
+        margin-right: 6em;
+        margin: 0em 15em;
+        justify-content: center;
+        p{
+            font-size: 18px;
+        }
+    }
+    margin-left: 6em;
+    margin-right: 6em;
+}
+
+.contact-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+    margin: 6em;
+    #message{
+        border: 1px solid $light-gray;
+    }
+    button{
+        padding: 1em 1.5em;
+        color: $white-color;
+        background-color: $light-gray;
+        border: 1px solid $light-gray;
+        border-radius: 30px;
+        margin-left: 2em;
+    }
+    button:hover{
+        background-color: $white-color;
+        transition: all 0.3s ease;
+        color: $dark-gray;
+        border: 1px solid $dark-gray;
+    }
+    .form-box{
+        border: 1px solid $light-gray;
+        border-radius: 10px;
+        padding: 4em;
+        h1{
+            font-size: 24px;
+            text-align: center;
+        }
+    }
+    .box2{
+        text-align: center;
+        .icon{
+            font-size: 32px;
+        }
+        p{
+            padding-bottom: 4em;
+            a{
+                color: $light-gray;
+                text-decoration: none;
+            }
+            a:hover{
+                color: $dark-gray;
+                transition: all 0.6s ease;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// PRODUCT
+
+.product-grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 2em;
+    margin: 6em;
+    justify-content: center;
+    color: $dark-gray;
+    img{
+        height: 50vh;
+        width: auto;
+        margin-left: 6em;
+    }
+    .box{
+        padding: 1em;
+    }
+    .price{
+        color: $light-gray;
+    }
+    .description{
+        width: 70vh;
+        height: auto;
+    }
+    a{
+        padding: 1em 1.5em;
+        color: $white-color;
+        background-color: $light-gray;
+        border: 1px solid $light-gray;
+        border-radius: 30px;
+        margin-top: 2em;
+        text-decoration: none;
+    }
+    a:hover{
+        background-color: $white-color;
+        transition: all 0.3s ease;
+        color: $dark-gray;
+        border: 1px solid $dark-gray;
+    }
+}
+
+// SIGNUP
+
+.signup{
+    margin: 0em 20em;
+    justify-content: center;
+    margin-bottom: 6em;
+    margin-top: 2em;
+    border: 1px solid $light-gray;
+    border-radius: 10px;
+    padding: 4em;
+}
+
+.header{
+    color: $dark-gray;
+    text-align: center;
+}
+
+form{
+    color: $dark-gray;
+    .pass-desc{
+        color: $light-gray;
+        font-size: 14px;
+    }
+    button{
+        padding: 1em 1.5em;
+        color: $white-color;
+        background-color: $light-gray;
+        border: 1px solid $light-gray;
+        border-radius: 30px;
+        margin-top: 2em;
+    }
+    button:hover{
+        background-color: $white-color;
+        transition: all 0.3s ease;
+        color: $dark-gray;
+        border: 1px solid $dark-gray;
+    }
+    .form-group{
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+}

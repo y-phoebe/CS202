@@ -1,0 +1,123 @@
+/*
+Style Sheet for CS202 Midterm Sample
+* version 1.0
+* last modified 8/11/2020
+* author: Phoebe Yost
+* email: phoebeyost01@gmail.com
+*/
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js");
+
+// VARIABLES
+$main-color: #05a081;
+$light: #fff;
+$bg-1: #eee;
+$bg-2: #333;
+$shadow: 0 1px 4px rgba(80,80,80,0.8);
+
+body{
+    background-color: $bg-1
+}
+
+h6, h1{
+    padding-bottom: 1em;
+}
+
+// NAVIGATION
+nav{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1em;
+    margin: 2rem 0;
+    a{
+        text-align: center;
+        text-decoration: none;
+        color: #333;
+        padding: 1em;
+        display: inline-block;
+        box-shadow: $shadow;
+    }
+}
+a:hover{
+    opacity: 1;
+    color: $light;
+    background: $main-color;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+// MIDDLE SECTION
+.grid{
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1.25fr 0.75fr;
+    margin: 2rem 0;
+}
+
+.banner{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    color: $light;
+    background: {
+        image: url(../Practice/images/banner.jpg);
+        size: cover;
+        position: center;
+    }
+}
+.banner-text{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    margin: auto;
+}
+.banner-text-items{
+    z-index: 2;
+}
+
+.box{
+    padding: 2rem;
+    box-shadow: $shadow;
+}
+
+// BOTTOM SECTION
+.bottom{
+    background-color: $bg-2;
+    color: $light;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 2rem 0;
+}
+.box2{
+    padding: 2rem;
+    text-align: center;
+}
+
+// FOOTER
+footer{
+    color: #333;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+@media(max-width:967px){
+    nav{
+        // GET BACK TO THIS... idk what to do yet
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .box2{
+        font-size: 12px;
+    }
+}
